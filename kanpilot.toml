@@ -7,9 +7,31 @@ id = "process1"
 name = "To Do"
 
   [[processes.tasks]]
-  id = "task1"
-  title = "This is a new feature"
-  description = ""
+  id = "cn90er5otygjuzl8inne1ef8"
+  title = "Set up users"
+  description = "Need to set up how we're going to track the names of people working on a project / working on tasks"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "aaqbjv4zxryynfy7uaik83xk"
+  title = "Tasks"
+  description = "Need to setup maybe a new struct that will hold: task name, task description, a priority, etc..."
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "qq328v17hn5b5t9wrasqd9xc"
+  title = "Stage of completion"
+  description = 'Need to setup a similar thing to the "to-do -> being done -> finished" aspect of kanban'
   tag = "backlog"
   linkFiles = [ ]
   dueDate = ""
@@ -20,17 +42,7 @@ name = "To Do"
 [[processes]]
 id = "process2"
 name = "In Progress"
-
-  [[processes.tasks]]
-  id = "task2"
-  title = "This is a bug should be repair"
-  description = ""
-  tag = "bug"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
+tasks = [ ]
 
 [[processes]]
 id = "process3"
