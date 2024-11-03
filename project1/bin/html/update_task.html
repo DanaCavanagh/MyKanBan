@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Task</title>
+  <script>
+    function updateTask(event) {
+      event.preventDefault();
+      const id = document.getElementById('task-id').value;
+      const title = document.getElementById('title').value;
+      const description = document.getElementById('description').value;
+      const status = document.getElementById('status').value;
+
+      fetch(`http://localhost:3000/tasks/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ title, description, status })
+      })
+      .then(response => response.text())
+      .then(data => {
+        alert('Task updated: ' + data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Update Task</h1>
+  <form onsubmit="updateTask(event)">
+    <label for="task-id">Task ID:</label>
+    <input type="text" id="task-id" name="task-id" required><br><br>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required><br><br>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" required><br><br>
+    <label for="status">Status:</label>
+    <input type="text" id="status" name="status" required><br><br>
+    <input type="submit" value="Update Task">
+  </form>
+</body>
+</html>

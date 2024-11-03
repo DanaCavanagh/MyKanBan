@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Task</title>
+  <script>
+    function createTask(event) {
+      event.preventDefault();
+      const title = document.getElementById('title').value;
+      const description = document.getElementById('description').value;
+      const status = document.getElementById('status').value;
+
+      fetch('http://localhost:3000/tasks', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ title, description, status })
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert('Task created with ID: ' + data.id);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Create Task</h1>
+  <form onsubmit="createTask(event)">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required><br><br>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" required><br><br>
+    <label for="status">Status:</label>
+    <input type="text" id="status" name="status" required><br><br>
+    <input type="submit" value="Create Task">
+  </form>
+</body>
+</html>
