@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delete Task</title>
+  <script>
+    function deleteTask(event) {
+      event.preventDefault();
+      const id = document.getElementById('task-id').value;
+
+      fetch(`http://localhost:3000/tasks/${id}`, {
+        method: 'DELETE'
+      })
+      .then(response => response.text())
+      .then(data => {
+        alert('Task deleted: ' + data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Delete Task</h1>
+  <form onsubmit="deleteTask(event)">
+    <label for="task-id">Task ID:</label>
+    <input type="text" id="task-id" name="task-id" required><br><br>
+    <input type="submit" value="Delete Task">
+  </form>
+</body>
+</html>

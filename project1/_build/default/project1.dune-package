@@ -1,4 +1,7 @@
 (lang dune 3.16)
 (name project1)
-(sections (lib .) (bin ../../bin))
-(files (lib (META dune-package opam)) (bin (project1)))
+(sections (lib .) (bin ../../bin) (share ../../share/project1))
+(files
+ (lib (META dune-package opam))
+ (bin (project1))
+ (share (create_task.html delete_task.html update_task.html)))

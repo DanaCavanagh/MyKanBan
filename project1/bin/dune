@@ -1,4 +1,26 @@
 (executable
  (public_name project1)
- (name main)
- (libraries opium))
+ (name app)
+ (libraries opium lwt yojson)
+ (preprocess (pps lwt_ppx))
+ (modes exe)
+ (package project1))
+
+(rule
+ (targets create_task.html update_task.html delete_task.html)
+ (deps
+  html/create_task.html
+  html/update_task.html
+  html/delete_task.html)
+ (action
+  (progn
+   (copy html/create_task.html create_task.html)
+   (copy html/update_task.html update_task.html)
+   (copy html/delete_task.html delete_task.html))))
+
+(install
+ (section share)
+ (files
+  (html/create_task.html as create_task.html)
+  (html/update_task.html as update_task.html)
+  (html/delete_task.html as delete_task.html)))
