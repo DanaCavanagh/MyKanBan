@@ -65,5 +65,6 @@ let () =
     |> App.get "/create_task" (serve_html_file "create_task.html")
     |> App.get "/update_task" (serve_html_file "update_task.html")
     |> App.get "/delete_task" (serve_html_file "delete_task.html")
+    |> App.get "/" (serve_html_file "home_page.html")
   in
   App.run_command app
