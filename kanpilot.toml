@@ -42,7 +42,17 @@ name = "To Do"
 [[processes]]
 id = "process2"
 name = "In Progress"
-tasks = [ ]
+
+  [[processes.tasks]]
+  id = "bzgxmc66a9ltzp53o5qoac1s"
+  title = "Add buttons to navigate pages"
+  description = "<p></p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = "Low"
+  linkCommits = [ ]
 
 [[processes]]
 id = "process3"
