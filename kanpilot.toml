@@ -59,6 +59,32 @@ name = "Done"
   linkCommits = [ ]
 
   [[processes.tasks]]
+  id = "a0mzmsxqrt5u2xmjdd4md6ar"
+  title = "create CSS stylesheets to improve appearance"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "enqdyc585wbibx64r2uh9n7v"
+  title = 'change status to drop down bar with "To Do", "In Progress" or "Done"'
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+[[processes]]
+id = "process2"
+name = "In Progress"
+
+  [[processes.tasks]]
   id = "aaqbjv4zxryynfy7uaik83xk"
   title = "Tasks"
   description = "Need to setup maybe a new struct that will hold: task name, task description, a priority, etc..."

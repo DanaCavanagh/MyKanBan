@@ -1,0 +1,152 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+/* Header styles */
+h1 {
+  color: #b30000;
+}
+
+/* Form styles */
+form {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #b30000;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 95%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  background-color: #b30000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #990000;
+}
+
+button {
+  background-color: #b30000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  width: 100px;
+}
+
+button:hover {
+  background-color: #990000;
+}
+
+/* Specific label styles */
+label[for="description"] {
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 6px; /* Adjust as needed */
+}
+
+/* Table styles */
+.table-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+  align-content: flex-start;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 10px;
+  width: 30%;
+  table-layout: fixed;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th {
+  height: 20px; /* Fixed height for table headers */
+  text-align: left;
+  padding: 8px;
+  vertical-align: top;
+  white-space: nowrap; /* Prevents text from wrapping */
+  position: sticky; /* Makes the header sticky */
+  top: 0; /* Sticks the header to the top */
+  background-color: #f8f8f8; /* Background color for the header */
+  z-index: 1; /* Ensures the header is above other content */
+  border-bottom: 2px solid #ccc; /* Line below the header */
+}
+
+td {
+  height: 40px; 
+  text-align: left;
+  padding: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+td.expandable {
+  height: 60px; /* Maximum height for table cells before allowing overflow */
+  overflow: auto;
+  white-space: normal;
+}
+
+th.id-column, td.id-column {
+  width: 20px; 
+}
+
+
+th.title-column, td.title-column {
+  width: 150px; /* Adjust as needed */
+}
+
+th.description-column, td.description-column {
+  width: 200px; /* Adjust as needed */
+}
+
+caption {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.homepageButtons{
+  display: flex;
+  width: 25%;
+  justify-content: space-around;
+  padding-left:10px;
+  padding-right: 10px;
+}

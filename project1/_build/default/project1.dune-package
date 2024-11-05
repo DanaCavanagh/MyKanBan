@@ -4,4 +4,4 @@
 (files
  (lib (META dune-package opam))
  (bin (project1))
- (share (create_task.html delete_task.html update_task.html)))
+ (share (create_task.html delete_task.html styles.css update_task.html)))
