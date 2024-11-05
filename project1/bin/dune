@@ -1,8 +1,8 @@
 (executable
  (public_name project1)
  (name app)
- (libraries opium lwt yojson)
- (preprocess (pps lwt_ppx))
+ (libraries opium lwt yojson ppx_deriving_yojson)
+ (preprocess (pps lwt_ppx ppx_deriving_yojson))
  (modes exe)
  (package project1))
 
@@ -18,9 +18,15 @@
    (copy html/update_task.html update_task.html)
    (copy html/delete_task.html delete_task.html))))
 
+(rule
+ (targets styles.css)
+ (deps css/styles.css)
+ (action (copy css/styles.css styles.css)))
+
 (install
  (section share)
  (files
   (html/create_task.html as create_task.html)
   (html/update_task.html as update_task.html)
-  (html/delete_task.html as delete_task.html)))
+  (html/delete_task.html as delete_task.html)
+  (css/styles.css as styles.css)))

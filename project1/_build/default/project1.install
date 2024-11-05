@@ -9,5 +9,6 @@ bin: [
 share: [
   "_build/install/default/share/project1/create_task.html"
   "_build/install/default/share/project1/delete_task.html"
+  "_build/install/default/share/project1/styles.css"
   "_build/install/default/share/project1/update_task.html"
 ]
