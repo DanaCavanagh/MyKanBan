@@ -17,9 +17,9 @@
         tasks.forEach(task => {
           const row = document.createElement('tr');
           row.innerHTML = `
-            <td class="expandable">${task.id}</td>
-            <td class="expandable">${task.title}</td>
-            <td class="expandable">${task.description}</td>
+            <td class="id-column expandable">${task.id}</td>
+            <td class="title-column expandable">${task.title}</td>
+            <td class="description-column expandable">${task.description}</td>
           `;
           tableBody.appendChild(row);
         });
@@ -42,9 +42,9 @@
         tasks.forEach(task => {
           const row = document.createElement('tr');
           row.innerHTML = `
-            <td class="expandable">${task.id}</td>
-            <td class="expandable">${task.title}</td>
-            <td class="expandable">${task.description}</td>
+            <td class="id-column expandable">${task.id}</td>
+            <td class="title-column expandable">${task.title}</td>
+            <td class="description-column expandable">${task.description}</td>
           `;
           tableBody.appendChild(row);
         });
@@ -67,9 +67,9 @@
         tasks.forEach(task => {
           const row = document.createElement('tr');
           row.innerHTML = `
-            <td class="expandable">${task.id}</td>
-            <td class="expandable">${task.title}</td>
-            <td class="expandable">${task.description}</td>
+            <td class="id-column expandable">${task.id}</td>
+            <td class="title-column expandable">${task.title}</td>
+            <td class="description-column expandable">${task.description}</td>
           `;
           tableBody.appendChild(row);
         });
@@ -128,7 +128,6 @@
     <div class ="homepageButtons">
     <button onclick="location.href='create_task'">Create Task</button>
     <button onclick="location.href='delete_task'">Delete Task</button>
-    <button onclick="location.href='tasks'" >View Tasks</button>
     <button onclick="location.href='update_task'">Update Task</button>
     </div>
 </body>
