@@ -17,16 +17,35 @@ name = "To Do"
   priority = ""
   linkCommits = [ ]
 
+[[processes]]
+id = "process2"
+name = "In Progress"
+
   [[processes.tasks]]
-  id = "aaqbjv4zxryynfy7uaik83xk"
-  title = "Tasks"
-  description = "Need to setup maybe a new struct that will hold: task name, task description, a priority, etc..."
+  id = "bzgxmc66a9ltzp53o5qoac1s"
+  title = "Add buttons to navigate pages"
+  description = "<p></p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = "Low"
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "mzg5nltyt8bbigjo2emaszhh"
+  title = "create a CSS stylesheet"
+  description = ""
   tag = "backlog"
   linkFiles = [ ]
   dueDate = ""
   checkList = [ ]
   priority = ""
   linkCommits = [ ]
+
+[[processes]]
+id = "process3"
+name = "Done"
 
   [[processes.tasks]]
   id = "qq328v17hn5b5t9wrasqd9xc"
@@ -66,17 +85,12 @@ id = "process2"
 name = "In Progress"
 
   [[processes.tasks]]
-  id = "bzgxmc66a9ltzp53o5qoac1s"
-  title = "Add buttons to navigate pages"
-  description = "<p></p>"
+  id = "aaqbjv4zxryynfy7uaik83xk"
+  title = "Tasks"
+  description = "Need to setup maybe a new struct that will hold: task name, task description, a priority, etc..."
   tag = "backlog"
   linkFiles = [ ]
   dueDate = ""
   checkList = [ ]
-  priority = "Low"
+  priority = ""
   linkCommits = [ ]
-
-[[processes]]
-id = "process3"
-name = "Done"
-tasks = [ ]
