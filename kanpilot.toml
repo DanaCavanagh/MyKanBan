@@ -17,28 +17,6 @@ name = "To Do"
   priority = ""
   linkCommits = [ ]
 
-  [[processes.tasks]]
-  id = "aaqbjv4zxryynfy7uaik83xk"
-  title = "Tasks"
-  description = "Need to setup maybe a new struct that will hold: task name, task description, a priority, etc..."
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
-  [[processes.tasks]]
-  id = "qq328v17hn5b5t9wrasqd9xc"
-  title = "Stage of completion"
-  description = 'Need to setup a similar thing to the "to-do -> being done -> finished" aspect of kanban'
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
 [[processes]]
 id = "process2"
 name = "In Progress"
@@ -54,7 +32,39 @@ name = "In Progress"
   priority = "Low"
   linkCommits = [ ]
 
+  [[processes.tasks]]
+  id = "mzg5nltyt8bbigjo2emaszhh"
+  title = "create a CSS stylesheet"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
 [[processes]]
 id = "process3"
 name = "Done"
-tasks = [ ]
+
+  [[processes.tasks]]
+  id = "qq328v17hn5b5t9wrasqd9xc"
+  title = "Stage of completion"
+  description = 'Need to setup a similar thing to the "to-do -> being done -> finished" aspect of kanban'
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "aaqbjv4zxryynfy7uaik83xk"
+  title = "Tasks"
+  description = "Need to setup maybe a new struct that will hold: task name, task description, a priority, etc..."
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
