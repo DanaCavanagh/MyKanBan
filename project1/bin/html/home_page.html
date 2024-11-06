@@ -12,7 +12,7 @@
         const response = await fetch('/todo_tasks');
         const tasks = await response.json();
         const tableBody = document.getElementById('todo-tasks-body');
-        tableBody.innerHTML = '';  // Clear existing rows
+        tableBody.innerHTML = '';  
 
         tasks.forEach(task => {
           const row = document.createElement('tr');
@@ -37,7 +37,7 @@
         const response = await fetch('/inprogress_tasks');
         const tasks = await response.json();
         const tableBody = document.getElementById('inprogress-tasks-body');
-        tableBody.innerHTML = '';  // Clear existing rows
+        tableBody.innerHTML = ''; 
 
         tasks.forEach(task => {
           const row = document.createElement('tr');
@@ -95,7 +95,7 @@
     </tr>
     </thead>
     <tbody id="todo-tasks-body">
-      <!-- Tasks will be dynamically inserted here -->
+      <!-- Tasks get inserted here -->
     </tbody>
   </table>
   <table>
@@ -108,7 +108,7 @@
     </tr>
     </thead>
     <tbody id="inprogress-tasks-body">
-      <!-- Tasks will be dynamically inserted here -->
+      <!-- tasks get inserted here -->
     </tbody>
   </table>
   <table>
@@ -121,7 +121,7 @@
     </tr>
     </thead>
     <tbody id="done-tasks-body">
-      <!-- Tasks will be dynamically inserted here -->
+      <!-- tasks get inserted here  -->
     </tbody>
   </table>
   </div>

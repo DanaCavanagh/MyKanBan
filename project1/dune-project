@@ -5,22 +5,16 @@
 (generate_opam_files true)
 
 (source
- (github username/reponame))
+ (github DanaCavanagh/Project_1_431))
 
-(authors "Author Name")
+(authors "Joel Rivera" "Connor George" "Dana Cavanagh")
 
-(maintainers "Maintainer Name")
+(maintainers "N/A")
 
-(license LICENSE)
-
-(documentation https://url/to/documentation)
 
 (package
  (name project1)
- (synopsis "A short synopsis")
- (description "A longer description")
- (depends ocaml dune)
- (tags
-  (topics "to describe" your project)))
+ (synopsis "A KanBan board web application")
+ (description "A KanBan board web application made using the Opium web framework.")
+ (depends ocaml dune opium lwt yojson ppx_deriving_yojson))
 
-; See the complete stanza docs at https://dune.readthedocs.io/en/stable/reference/dune-project/index.html

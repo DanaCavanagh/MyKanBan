@@ -5,52 +5,21 @@ skipFiles = [ ".gitignore", "package.json" ]
 [[processes]]
 id = "process1"
 name = "To Do"
-
-  [[processes.tasks]]
-  id = "cn90er5otygjuzl8inne1ef8"
-  title = "Set up users"
-  description = "Need to set up how we're going to track the names of people working on a project / working on tasks"
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
+tasks = [ ]
 
 [[processes]]
-id = "process2"
+id = "hej3fnxl59vsjijfq9mo7xzt"
 name = "In Progress"
-
-  [[processes.tasks]]
-  id = "bzgxmc66a9ltzp53o5qoac1s"
-  title = "Add buttons to navigate pages"
-  description = "<p></p>"
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = "Low"
-  linkCommits = [ ]
-
-  [[processes.tasks]]
-  id = "mzg5nltyt8bbigjo2emaszhh"
-  title = "create a CSS stylesheet"
-  description = ""
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
+tasks = [ ]
 
 [[processes]]
 id = "process3"
 name = "Done"
 
   [[processes.tasks]]
-  id = "qq328v17hn5b5t9wrasqd9xc"
-  title = "Stage of completion"
-  description = 'Need to setup a similar thing to the "to-do -> being done -> finished" aspect of kanban'
+  id = "x05b40j2cubdr57s2dta5xwz"
+  title = "Opium backend"
+  description = "get initial backend opium project built"
   tag = "backlog"
   linkFiles = [ ]
   dueDate = ""
@@ -59,9 +28,9 @@ name = "Done"
   linkCommits = [ ]
 
   [[processes.tasks]]
-  id = "a0mzmsxqrt5u2xmjdd4md6ar"
-  title = "create CSS stylesheets to improve appearance"
-  description = ""
+  id = "qq328v17hn5b5t9wrasqd9xc"
+  title = "Stage of completion"
+  description = 'Need to setup a similar thing to the "to-do -> being done -> finished" aspect of kanban'
   tag = "backlog"
   linkFiles = [ ]
   dueDate = ""
@@ -80,9 +49,27 @@ name = "Done"
   priority = ""
   linkCommits = [ ]
 
-[[processes]]
-id = "process2"
-name = "In Progress"
+  [[processes.tasks]]
+  id = "mzg5nltyt8bbigjo2emaszhh"
+  title = "create a CSS stylesheet"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "bzgxmc66a9ltzp53o5qoac1s"
+  title = "Add buttons to navigate pages"
+  description = "<p></p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = "Low"
+  linkCommits = [ ]
 
   [[processes.tasks]]
   id = "aaqbjv4zxryynfy7uaik83xk"

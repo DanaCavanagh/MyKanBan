@@ -1,4 +1,4 @@
-/* General styles */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f8f8;
@@ -12,12 +12,12 @@ body {
   height: 100vh;
 }
 
-/* Header styles */
+
 h1 {
   color: #b30000;
 }
 
-/* Form styles */
+
 form {
   background-color: #fff;
   border: 1px solid #ccc;
@@ -70,14 +70,14 @@ button:hover {
   background-color: #990000;
 }
 
-/* Specific label styles */
+
 label[for="description"] {
   vertical-align: top;
   display: inline-block;
-  margin-top: 6px; /* Adjust as needed */
+  margin-top: 6px; 
 }
 
-/* Table styles */
+
 .table-container {
   display: flex;
   justify-content: space-around;
@@ -98,16 +98,16 @@ table, th, td {
 }
 
 th {
-  height: 20px; /* Fixed height for table headers */
+  height: 20px; 
   text-align: left;
   padding: 8px;
   vertical-align: top;
-  white-space: nowrap; /* Prevents text from wrapping */
-  position: sticky; /* Makes the header sticky */
-  top: 0; /* Sticks the header to the top */
-  background-color: #f8f8f8; /* Background color for the header */
-  z-index: 1; /* Ensures the header is above other content */
-  border-bottom: 2px solid #ccc; /* Line below the header */
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  background-color: #f8f8f8; 
+  z-index: 1; 
+  border-bottom: 2px solid #ccc;
 }
 
 td {
@@ -120,7 +120,7 @@ td {
 }
 
 td.expandable {
-  height: 60px; /* Maximum height for table cells before allowing overflow */
+  height: 60px; 
   overflow: auto;
   white-space: normal;
 }
@@ -131,11 +131,11 @@ th.id-column, td.id-column {
 
 
 th.title-column, td.title-column {
-  width: 150px; /* Adjust as needed */
+  width: 150px; 
 }
 
 th.description-column, td.description-column {
-  width: 200px; /* Adjust as needed */
+  width: 200px;
 }
 
 caption {
