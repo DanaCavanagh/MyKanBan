@@ -1,4 +1,3 @@
-
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f8f8;
@@ -15,7 +14,6 @@ body {
 h1 {
   color: #b30000;
 }
-
 
 form {
   background-color: #fff;
@@ -69,13 +67,11 @@ button:hover {
   background-color: #990000;
 }
 
-
 label[for="description"] {
   vertical-align: top;
   display: inline-block;
   margin-top: 6px; 
 }
-
 
 .table-container {
   display: flex;
@@ -83,12 +79,13 @@ label[for="description"] {
   width: 100%;
   height: auto;
   align-content: flex-start;
+  flex-wrap: wrap; /* Allow tables to wrap in smaller screens */
 }
 
 table {
   border-collapse: collapse;
   margin: 10px;
-  width: 30%;
+  width: 25%; /* Reduce the table width */
   table-layout: fixed;
 }
 
@@ -125,16 +122,22 @@ td.expandable {
 }
 
 th.id-column, td.id-column {
-  width: 20px; 
+  width: 10%; /* Adjust width for ID column */
 }
 
-
 th.title-column, td.title-column {
-  width: 150px; 
+  width: 25%; /* Adjust width for Title column */
 }
 
 th.description-column, td.description-column {
-  width: 200px;
+  width: 35%; /* Adjust width for Description column */
+}
+
+th.due-date-column, td.due-date-column {
+  width: 25%; /* Increase width of Due Date column */
+  word-wrap: break-word; /* Allow wrapping of text inside the cell */
+  padding: 10px; /* Add more padding to give space for the date */
+  white-space: normal; /* Allow the date to wrap within the cell */
 }
 
 caption {

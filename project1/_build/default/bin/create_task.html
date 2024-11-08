@@ -5,26 +5,28 @@
   <link rel="stylesheet" href="styles.css">
   <script>
     function createTask(event) {
-      event.preventDefault();
-      const title = document.getElementById('title').value;
-      const description = document.getElementById('description').value;
-      const status = document.getElementById('status').value;
+    event.preventDefault();
+    const title = document.getElementById('title').value;
+    const description = document.getElementById('description').value;
+    const status = document.getElementById('status').value;
+    const dueDate = document.getElementById('due_date').value;  // Get the due date
 
-      fetch('http://localhost:3000/tasks', {
+    fetch('http://localhost:3000/tasks', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+            'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ title, description, status })
-      })
-      .then(response => response.json())
-      .then(data => {
+        body: JSON.stringify({ title, description, status, due_date: dueDate })  // Include due date
+    })
+    .then(response => response.json())
+    .then(data => {
         alert('Task created with ID: ' + data.id);
-      })
-      .catch(error => {
+    })
+    .catch(error => {
         console.error('Error:', error);
-      });
-    }
+    });
+}
+
 
     function updateFooter() {
         const footer = document.getElementById('footer');
@@ -51,6 +53,8 @@
       <option value="To Do">To Do</option>
       <option value="In Progress">In Progress</option>
       <option value="Done">Done</option>
+    <label for="due_date">Due Date:</label>
+    <input type="date" id="due_date" name="due_date" required><br><br>  
     </select><br><br>
     <input type="submit" value="Create Task">
   </form>

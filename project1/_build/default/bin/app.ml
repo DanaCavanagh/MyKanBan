@@ -5,6 +5,7 @@ type task = {
   title : string;
   description : string;
   status : string;
+  due_date : string;  (* New field for due date *)
 } [@@deriving yojson]
 
 let tasks = ref []
@@ -15,7 +16,8 @@ let get_tasks _req =
       ("id", `Int task.id);
       ("title", `String task.title);
       ("description", `String task.description);
-      ("status", `String task.status)
+      ("status", `String task.status);
+      ("due_date", `String task.due_date)  (* Include due date in response *)
     ]) !tasks) in
   Response.of_json json |> Lwt.return
 
@@ -25,7 +27,8 @@ let create_task req =
   let title = body |> Yojson.Safe.Util.member "title" |> Yojson.Safe.Util.to_string in
   let description = body |> Yojson.Safe.Util.member "description" |> Yojson.Safe.Util.to_string in
   let status = body |> Yojson.Safe.Util.member "status" |> Yojson.Safe.Util.to_string in
-  let task = { id; title; description; status } in
+  let due_date = body |> Yojson.Safe.Util.member "due_date" |> Yojson.Safe.Util.to_string in  (* Extract due date *)
+  let task = { id; title; description; status; due_date } in  (* Include due date in task *)
   tasks := task :: !tasks;
   Response.of_json (`Assoc [("id", `Int id)]) |> Lwt.return
 
@@ -35,8 +38,9 @@ let update_task req =
   let title = body |> Yojson.Safe.Util.member "title" |> Yojson.Safe.Util.to_string in
   let description = body |> Yojson.Safe.Util.member "description" |> Yojson.Safe.Util.to_string in
   let status = body |> Yojson.Safe.Util.member "status" |> Yojson.Safe.Util.to_string in
+  let due_date = body |> Yojson.Safe.Util.member "due_date" |> Yojson.Safe.Util.to_string in  (* Extract due date *)
   tasks := List.map (fun task ->
-    if task.id = id then { task with title; description; status }
+    if task.id = id then { task with title; description; status; due_date }  (* Update due date if task is found *)
     else task) !tasks;
   Response.of_plain_text "Task updated" |> Lwt.return
 
@@ -66,7 +70,6 @@ let serve_css_file filename _req =
     (fun exn ->
       let error_message = Printexc.to_string exn in
       Response.of_plain_text ("Internal server error: " ^ error_message) |> Lwt.return)
-
 
 let get_todo_tasks _req =
   let todo_tasks = List.filter (fun task -> task.status = "To Do") !tasks in
