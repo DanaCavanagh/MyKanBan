@@ -1,9 +1,9 @@
 # dune exec project1
 # OCAMLPARAM: unset
 # Shared cache: disabled
-# Shared cache location: /home/dana/.cache/dune/db
-# Workspace root: /home/dana/Desktop/CS431/Project_1_431/project1
-# Auto-detected concurrency: 16
+# Shared cache location: /home/joelbrandonr/.cache/dune/db
+# Workspace root: /home/joelbrandonr/Project_1_431/project1
+# Auto-detected concurrency: 12
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -13,4 +13,4 @@
 #  ; build_dir = In_build_dir "default"
 #  ; instrument_with = []
 #  }
-$ /home/dana/.opam/secondTry/bin/ocamlc.opt -config > /tmp/dune_b709b6_output
+$ /home/joelbrandonr/.opam/4.12.0/bin/ocamlc.opt -config > /tmp/dune_f700ea_output
