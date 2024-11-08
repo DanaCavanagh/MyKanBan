@@ -26,7 +26,19 @@
         console.error('Error:', error);
       });
     }
+
+    function updateFooter() {
+        const footer = document.getElementById('footer');
+        const now = new Date();
+        footer.textContent = `Date and Time: ${now.toLocaleString()}`;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        updateFooter();
+        setInterval(updateFooter, 1000); // Updates every second
+    });
   </script>
+
 </head>
 <body>
   <h1>Update Task</h1>
@@ -47,5 +59,10 @@
   </form>
   <br>
   <button onclick="location.href='/'">Home</button>
+
+  <footer id="footer" style="margin-top: 20px; text-align: center;">
+
+  </footer>
+  
 </body>
 </html>
